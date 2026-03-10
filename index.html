@@ -1,68 +1,123 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LNH — Projects & Docs</title>
+    <meta name="description" content="LNH projects, docs and downloads." />
+    <link rel="icon" href="favicon.ico" />
+    <!-- Base styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Icons (Tabler Icons CDN) -->
+    <link rel="preconnect" href="https://unpkg.com" />
+    <script defer src="https://unpkg.com/@tabler/icons-webfont@latest/dist/tabler-icons.min.js"></script>
+    <script defer src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span class="brand-text">LNH</span>
+        </a>
 
-<!-- 
-  Project: languagenut Homework Hack
-  Author: z3phy.dev
-  License: Free to use, modify, and share for personal or educational purposes.
-  Disclaimer: This code is provided as-is without any warranty. 
-              Use responsibly and only in safe, legal contexts.
--->
+        <nav class="nav">
+          <a href="#projects">Projects</a>
+          <a href="#docs">Docs</a>
+          <a href="#downloads">Downloads</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LNH</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="login" class="overlay">
-        <div class="panel">
-            <h2>Login</h2>
-            <input class="input-field" id="username_input" type="text" placeholder="Username" autocomplete="username">
-            <input class="input-field" id="password_input" type="text" placeholder="Password" autocomplete="current-password">
-            <button class="btn btn-primary" id="login_btn">Log In</button>
+        <button class="btn-ghost" id="themeToggle" aria-label="Toggle color theme" title="Toggle theme">
+          <i class="ti ti-sun-high" id="themeIcon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <h1>Lost Nintendo History, beautifully presented</h1>
+        <p class="lead">
+          Explore restoration projects, documentation and tools from LNH.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#projects"><i class="ti ti-rocket" aria-hidden="true"></i> View projects</a>
+          <a class="btn-secondary" href="#docs"><i class="ti ti-book-2" aria-hidden="true"></i> Read docs</a>
         </div>
-    </div>
+      </section>
 
-    <div id="hw_panel" class="overlay">
-        <div class="panel">
-            <h2>Homeworks</h2>
-            <div class="checkbox-row">
-                <input type="checkbox" id="selectall">
-                <label for="selectall">Select all</label>
-            </div>
-            <div id="hw_container" class="content-container"></div>
-            <button id="do_hw" class="btn btn-success">DO THE HOMEWORK</button>
+      <section id="projects" class="container section">
+        <h2>Projects</h2>
+        <div class="grid">
+          <!-- Replace href targets with your real pages/anchors -->
+          <a class="card" href="dspico_hw.html">
+            <i class="ti ti-cpu"></i>
+            <h3>DSpico Hardware</h3>
+            <p>Open-source DS(i) flashcart hardware details and schematics.</p>
+          </a>
+
+          <a class="card" href="dspico_sw.html">
+            <i class="ti ti-device-gamepad-2"></i>
+            <h3>DSpico Software</h3>
+            <p>Pico Launcher & Loader—browse and run apps on DS(i) flashcarts.</p>
+          </a>
+
+          <a class="card" href="https://github.com/LNH-team/lnh-team.github.io" target="_blank" rel="noreferrer">
+            <i class="ti ti-brand-github"></i>
+            <h3>Website Source</h3>
+            <p>Fork or file issues; contributions welcome.</p>
+          </a>
         </div>
-    </div>
+      </section>
 
-    <div id="log_panel" class="overlay overlay-right">
-        <div class="panel">
-            <h2>Logs</h2>
-            <div id="hw_bar" class="progress-bar"></div>
-            <div id="log_container" class="content-container"></div>
+      <section id="docs" class="container section">
+        <h2>Documentation</h2>
+        <div class="grid">
+          <a class="card" href="README.html">
+            <i class="ti ti-book"></i>
+            <h3>Getting Started</h3>
+            <p>Setup guides and FAQs.</p>
+          </a>
+          <a class="card" href="GUIDE.html">
+            <i class="ti ti-notebook"></i>
+            <h3>Build Guides</h3>
+            <p>Step-by-step assembly and flashing.</p>
+          </a>
+          <a class="card" href="https://www.lnh-team.org/" target="_blank" rel="noreferrer">
+            <i class="ti ti-link"></i>
+            <h3>lnh-team.org</h3>
+            <p>Learn more about the team and preservation projects.</p>
+          </a>
         </div>
-    </div>
+      </section>
 
-    <dialog id="settings">
-        <div class="settings-content">
-            <h3>Settings</h3>
-            <p class="settings-note">[Esc] to exit</p>
-
-            <div class="setting-group">
-                <label for="speed_slider">Completion time:</label>
-                <input type="range" min="0" max="24" value="0" id="speed_slider" step="0.1">
-                <div class="speed-display">
-                    Current: <span id="speed_display">5 seconds</span>
-                </div>
-            </div>
+      <section id="downloads" class="container section">
+        <h2>Downloads</h2>
+        <div class="grid">
+          <a class="card" href="releases/latest.zip">
+            <i class="ti ti-download"></i>
+            <h3>Latest Release</h3>
+            <p>Grab the newest binaries and assets.</p>
+          </a>
+          <a class="card" href="changelog.html">
+            <i class="ti ti-list-details"></i>
+            <h3>Changelog</h3>
+            <p>What changed, and why.</p>
+          </a>
+          <a class="card" href="license.html">
+            <i class="ti ti-script"></i>
+            <h3>Licenses</h3>
+            <p>MIT, zlib, CC-BY-SA, and more as applicable.</p>
+          </a>
         </div>
-    </dialog>
+      </section>
+    </main>
 
-    <button id="settings_button" class="settings-btn">Settings</button>
-
-    <script src="script.js"></script>
-</body>
-
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> LNH. Built with ❤️ for preservation.</p>
+        <a href="#top" class="back-to-top"><i class="ti ti-arrow-up"></i> Back to top</a>
+      </div>
+    </footer>
+  </body>
 </html>
